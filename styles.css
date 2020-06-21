@@ -28,6 +28,7 @@ h2, h3{margin-top: .7em; margin-bottom: .7em;}
   height: auto;
   overflow-x: hidden;
 }
+/*----------------------------------------------------------------------*/
 /* menu section */
 #menu-bar{
   width: 30%;
@@ -55,11 +56,11 @@ h2, h3{margin-top: .7em; margin-bottom: .7em;}
   height: 100%;
   border-radius: 50%;
 }
-#model-face, #model-title, #socials-holder, #landing-content, #model-details-content{
+#model-face, #model-title, #socials-holder, #landing-content, #model-details-content, .services-cards-content{
   align-self: center;
   justify-self: center;
 }
-#about-section h2::after, #resume-section h2::after, #portfolio-section h2::after{
+#about-section h2::after, #resume-section h2::after, #portfolio-section h2::after, #services-section h2::after{
   content: '';
   height: 2px;
   width: 60%;
@@ -120,6 +121,7 @@ li.nav-link{
   color: var(--secondary);
 }
 /* end of menu section */
+/*----------------------------------------------------------------------*/
 #content-bar{
   width: 70%;
   height: auto;
@@ -157,7 +159,7 @@ span.color-highlight{color: var(--secondary);}
   color: black;
 }
 /* END OF LANDING PAGE */
-/*------------------------------------------------------------*/
+/*----------------------------------------------------------------------*/
 /* About section */
 #about-section, #resume-section, #portfolio-section, #services-section, #contact-section, #process-section{
   width: 100%;
@@ -179,8 +181,9 @@ span.color-highlight{color: var(--secondary);}
 }
 #model-details{display: grid;}
 /* end of about section */
+/*----------------------------------------------------------------------*/
 /* resume section */
-.resume-cards{
+.resume-cards, .services-cards{
   background-color: #191919;
   color: #fff;
   text-align: left;
@@ -188,6 +191,7 @@ span.color-highlight{color: var(--secondary);}
 }
 p.large-text{font-size: 160%;}
 /* end of resume section */
+/*----------------------------------------------------------------------*/
 /* portfolio section */
 #portfolio-content{display: grid;}
 .portfolio-cards{
@@ -195,10 +199,42 @@ p.large-text{font-size: 160%;}
   grid-auto-rows: minmax(30vh, auto);
 }
 .portfolio-img{width: 100%; }
-.portfolio-img img:hover{opacity: .7;}
+.portfolio-img img:hover,
+.services-cards:hover{opacity: .7;}
 #p-card-one{grid-column: 1; grid-row: 1/2;}
 #p-card-two{grid-column: 1; grid-row: 2/3;}
 #p-card-three{grid-column: 2; grid-row: 1/3;}
 #p-card-four{grid-column: 3; grid-row: 1/2;}
 #p-card-five{grid-column: 3; grid-row: 2/3;}
 /* end of resume section */
+/*----------------------------------------------------------------------*/
+/* services section */
+#services-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(40vh, auto);
+}
+.services-cards{
+  display: grid;
+  text-align: center;
+}
+ion-icon{
+  font-size: 4em;
+  color: var(--secondary);
+}
+.services-cards-content h4{
+  position: relative;
+  display: grid;
+}
+.services-cards-content h4::after{
+  content: '';
+  height: 1px;
+  width: 30%;
+  background-color: var(--secondary);
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 15%);
+}
+/* end of services section */
+/*----------------------------------------------------------------------*/
