@@ -18,7 +18,8 @@ body{
 /*end*/
 /* utilities*/
 h2{font-size: 200%;}
-h3{font-size: 120%;}
+h3{font-size: 140%;}
+p{font-size: 120%;}
 h2, h3{margin-top: .7em; margin-bottom: .7em;}
 /*end of utilities*/
 #wrapper{
@@ -53,18 +54,18 @@ h2, h3{margin-top: .7em; margin-bottom: .7em;}
   height: 100%;
   border-radius: 50%;
 }
-#model-face, #model-title, #socials-holder, #landing-content{
+#model-face, #model-title, #socials-holder, #landing-content, #model-details-content{
   align-self: center;
   justify-self: center;
 }
-#model-info::after{
+#about-section h2::after, #resume-section h2::after{
   content: '';
   height: 2px;
-  width: 90%;
+  width: 60%;
   background-color: var(--secondary);
   position: absolute;
   bottom: 0;
-  left: calc(50% - 45%);
+  left: calc(50% - 30%);
 }
 #menu-info{
   width: 100%;
@@ -141,7 +142,7 @@ span.color-highlight{color: var(--secondary);}
 .btn{
   text-decoration: none;
   color: #fff;
-  padding: .5em 1em;
+  padding: 1em 2em;
   border: 2px solid black;
   border-radius: 24px;
   text-transform: uppercase;
@@ -155,3 +156,35 @@ span.color-highlight{color: var(--secondary);}
   color: black;
 }
 /* END OF LANDING PAGE */
+/*------------------------------------------------------------*/
+/* About section */
+#about-section, #resume-section, #portfolio-section, #services-section, #contact-section, #process-section{
+  width: 100%;
+  text-align: center;
+}
+#about-section h2, #resume-section h2, #portfolio-section h2, #services-section h2, #contact-section h2, #process-section h2{
+  position: relative;
+  display: inline-block;
+}
+#about-content, #resume-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(40vh, auto);
+}
+#model-img img{
+  width: 100%;
+  max-width: 100%;
+}
+#model-details{display: grid;}
+/* end of about section */
+/* resume section */
+
+.resume-cards{
+  background-color: #191919;
+  color: #fff;
+  text-align: left;
+  padding: 2em;
+}
+p.large-text{font-size: 140%;}
+/* end of resume section */
