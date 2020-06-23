@@ -21,7 +21,7 @@ body{
 h2{font-size: 200%;}
 h3{font-size: 140%;}
 p{font-size: 120%;}
-h2, h3{margin-top: .7em; margin-bottom: .7em;}
+h2, h3, h4, #sbmt, .cad-icon, .cad-text{margin-top: .7em; margin-bottom: .7em;}
 /*end of utilities*/
 #wrapper{
   width: 100%;
@@ -56,11 +56,11 @@ h2, h3{margin-top: .7em; margin-bottom: .7em;}
   height: 100%;
   border-radius: 50%;
 }
-#model-face, #model-title, #socials-holder, #landing-content, #model-details-content, .services-cards-content{
+#model-face, #model-title, #socials-holder, #landing-content, #model-details-content, .services-cards-content, #contact-content-one{
   align-self: center;
   justify-self: center;
 }
-#about-section h2::after, #resume-section h2::after, #portfolio-section h2::after, #services-section h2::after{
+#about-section h2::after, #resume-section h2::after, #portfolio-section h2::after, #services-section h2::after, #contact-section h2::after{
   content: '';
   height: 2px;
   width: 60%;
@@ -154,7 +154,7 @@ span.color-highlight{color: var(--secondary);}
 .btn:hover{
   box-shadow: 5px 5px 10px black;
 }
-.button{
+.button, #sbmt{
   background-color: var(--secondary);
   color: black;
 }
@@ -179,7 +179,10 @@ span.color-highlight{color: var(--secondary);}
   width: 100%;
   max-width: 100%;
 }
-#model-details{display: grid;}
+#model-details, #portfolio-content, #services-content, .services-cards,
+.services-cards-content h4, #contact-content-one, #contact-form-address,
+#theForm
+{display: grid;}
 /* end of about section */
 /*----------------------------------------------------------------------*/
 /* resume section */
@@ -193,7 +196,6 @@ p.large-text{font-size: 160%;}
 /* end of resume section */
 /*----------------------------------------------------------------------*/
 /* portfolio section */
-#portfolio-content{display: grid;}
 .portfolio-cards{
   /*border: 1px solid black;*/
   grid-auto-rows: minmax(30vh, auto);
@@ -210,22 +212,19 @@ p.large-text{font-size: 160%;}
 /*----------------------------------------------------------------------*/
 /* services section */
 #services-content{
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
   grid-auto-rows: minmax(40vh, auto);
 }
 .services-cards{
-  display: grid;
   text-align: center;
 }
 ion-icon{
-  font-size: 4em;
+  font-size: 3em;
   color: var(--secondary);
 }
 .services-cards-content h4{
   position: relative;
-  display: grid;
 }
 .services-cards-content h4::after{
   content: '';
@@ -237,4 +236,71 @@ ion-icon{
   left: calc(50% - 15%);
 }
 /* end of services section */
+/*----------------------------------------------------------------------*/
+/* contact section */
+#contact-content-one{
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(20vh, auto);
+  background-color: #000;
+  padding: 1.5em;
+}
+.contact{
+  text-align: center;
+  color: #fff;
+}
+.contact ion-icon{
+  padding: .3em;
+  border: 1px solid #191919;
+  border-radius: 50%;
+  background-color: #191919;
+}
+#contact-form-address{
+  width: 90%;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+#contact-form, #contact-address{padding: 3em;}
+form #theForm{
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%; 
+  grid-gap: 1em;
+}
+.row{
+  text-align: left;
+}
+#theForm label{
+  display: block;
+  font-size: 90%;
+  font-weight: bold;
+}
+#theForm input, .row textarea{
+  border: 1px solid #191919; 
+  padding: 1em;
+  border-radius: 24px;
+}
+.row, .row label, .row input, .row textarea{ 
+  width: 100%;
+}
+#sbmt:hover{cursor: pointer;}
+#contact-address-details{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.locate-icon{
+  font-size: 1.5em;
+  color: var(--secondary);
+}
+.cad-text{text-align: left;}
+/* end of contact section */
+/*----------------------------------------------------------------------*/
+/* footer section */
+#footer-section{
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+  background-color: #191919;
+  color: #fff;
+  text-align: center;
+}
+/* end of contact section */
 /*----------------------------------------------------------------------*/
