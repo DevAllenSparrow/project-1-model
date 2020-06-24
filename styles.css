@@ -56,7 +56,7 @@ h2, h3, h4, #sbmt, .cad-icon, .cad-text{margin-top: .7em; margin-bottom: .7em;}
   height: 100%;
   border-radius: 50%;
 }
-#model-face, #model-title, #socials-holder, #landing-content, #model-details-content, .services-cards-content, #contact-content-one{
+#model-face, #model-title, #socials-holder, #landing-content, #model-details-content, .services-cards-content, #contact-content-one, .contact{
   align-self: center;
   justify-self: center;
 }
@@ -88,7 +88,7 @@ a.menu-link{
 }
 a.menu-link:hover{
   color: var(--secondary);
-  background-color: black;
+  background-color: #191919;
   border-radius: 24px;
 }
 li.nav-icon, li.nav-link{
@@ -254,6 +254,7 @@ ion-icon{
   border-radius: 50%;
   background-color: #191919;
 }
+.contact ion-icon:hover{cursor: pointer;}
 #contact-form-address{
   width: 90%;
   margin: auto;
@@ -304,3 +305,9 @@ form #theForm{
 }
 /* end of contact section */
 /*----------------------------------------------------------------------*/
+/* scroll highlight section */
+#about-section:hover #menu-link-two{
+  color: var(--secondary);
+  background-color: black;
+}
+/* end of scroll highlight section */
