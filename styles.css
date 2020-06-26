@@ -17,12 +17,14 @@ body{
   --background: #fff;
 }
 /*end*/
+/*----------------------------------------------------------------------*/
 /* utilities*/
 h2{font-size: 200%;}
 h3{font-size: 140%;}
 p{font-size: 120%;}
 h2, h3, h4, #sbmt, .cad-icon, .cad-text{margin-top: .7em; margin-bottom: .7em;}
 /*end of utilities*/
+/*----------------------------------------------------------------------*/
 #wrapper{
   width: 100%;
   height: auto;
@@ -55,19 +57,6 @@ h2, h3, h4, #sbmt, .cad-icon, .cad-text{margin-top: .7em; margin-bottom: .7em;}
   width: 100%;
   height: 100%;
   border-radius: 50%;
-}
-#model-face, #model-title, #socials-holder, #landing-content, #model-details-content, .services-cards-content, #contact-content-one, .contact{
-  align-self: center;
-  justify-self: center;
-}
-#about-section h2::after, #resume-section h2::after, #portfolio-section h2::after, #services-section h2::after, #contact-section h2::after{
-  content: '';
-  height: 2px;
-  width: 60%;
-  background-color: var(--secondary);
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 30%);
 }
 #menu-info{
   width: 100%;
@@ -116,10 +105,6 @@ li.nav-link{
   padding: 1em;
   margin: 5px;
 }
-#socials-holder .fab, #socials-holder .fas{font-size: 120%; color: black;}
-#socials-holder .fab:hover, #socials-holder .fas:hover{
-  color: var(--secondary);
-}
 /* end of menu section */
 /*----------------------------------------------------------------------*/
 #content-bar{
@@ -161,37 +146,9 @@ span.color-highlight{color: var(--secondary);}
 /* END OF LANDING PAGE */
 /*----------------------------------------------------------------------*/
 /* About section */
-#about-section, #resume-section, #portfolio-section, #services-section, #contact-section, #process-section{
-  width: 100%;
-  text-align: center;
-}
-#about-section h2, #resume-section h2, #portfolio-section h2, #services-section h2, #contact-section h2, #process-section h2{
-  position: relative;
-  display: inline-block;
-}
-#about-content, #resume-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
-  grid-auto-rows: minmax(40vh, auto);
-}
-#model-img img, .portfolio-img img{
-  width: 100%;
-  max-width: 100%;
-}
-#model-details, #portfolio-content, #services-content, .services-cards,
-.services-cards-content h4, #contact-content-one, #contact-form-address,
-#theForm
-{display: grid;}
 /* end of about section */
 /*----------------------------------------------------------------------*/
 /* resume section */
-.resume-cards, .services-cards{
-  background-color: #191919;
-  color: #fff;
-  text-align: left;
-  padding: 2em;
-}
 p.large-text{font-size: 160%;}
 /* end of resume section */
 /*----------------------------------------------------------------------*/
@@ -311,3 +268,52 @@ form #theForm{
   background-color: black;
 }
 /* end of scroll highlight section */
+/*----------------------------------------------------------------------*/
+/*css organized strategically*/
+#model-face, #model-title, #socials-holder, #landing-content, #model-details-content, .services-cards-content, #contact-content-one, .contact{
+  align-self: center;
+  justify-self: center;
+}
+#about-section h2::after, #resume-section h2::after, #portfolio-section h2::after, #services-section h2::after, #contact-section h2::after{
+  content: '';
+  height: 2px;
+  width: 60%;
+  background-color: var(--secondary);
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 30%);
+}
+#socials-holder .fab, #socials-holder .fas{font-size: 120%; color: black;}
+#socials-holder .fab:hover, #socials-holder .fas:hover{
+  color: var(--secondary);
+}
+#about-section, #resume-section, #portfolio-section, #services-section, #contact-section, #process-section{
+  width: 100%;
+  text-align: center;
+}
+#about-section h2, #resume-section h2, #portfolio-section h2, #services-section h2, #contact-section h2, #process-section h2{
+  position: relative;
+  display: inline-block;
+}
+#about-content, #resume-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(40vh, auto);
+}
+#model-img img, .portfolio-img img{
+  width: 100%;
+  max-width: 100%;
+}
+#model-details, #portfolio-content, #services-content, .services-cards,
+.services-cards-content h4, #contact-content-one, #contact-form-address,
+#theForm
+{display: grid;}
+.resume-cards, .services-cards{
+  background-color: #191919;
+  color: #fff;
+  text-align: left;
+  padding: 2em;
+}
+/*end of css organized strategically*/
+/*----------------------------------------------------------------------*/
