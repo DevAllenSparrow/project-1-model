@@ -42,7 +42,6 @@ h2, h3, h4, #sbmt, .cad-icon, .cad-text{margin-top: .7em; margin-bottom: .7em;}
 #model-info{
   width: 100%;
   height: 20vh;
-  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -143,6 +142,13 @@ span.color-highlight{color: var(--secondary);}
   background-color: var(--secondary);
   color: black;
 }
+#btp-holder{
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  position: relative;
+  display: none;
+}
 /* END OF LANDING PAGE */
 /*----------------------------------------------------------------------*/
 /* About section */
@@ -153,19 +159,19 @@ p.large-text{font-size: 160%;}
 /* end of resume section */
 /*----------------------------------------------------------------------*/
 /* portfolio section */
+#portfolio-content{
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(40vh, auto);
+}
 .portfolio-cards{
   /*border: 1px solid black;*/
   grid-auto-rows: minmax(30vh, auto);
 }
-.portfolio-img{width: 100%; }
+.portfolio-img{width: 100%;}
 .portfolio-img img:hover,
 .services-cards:hover{opacity: .7;}
-#p-card-one{grid-column: 1; grid-row: 1/2;}
-#p-card-two{grid-column: 1; grid-row: 2/3;}
-#p-card-three{grid-column: 2; grid-row: 1/3;}
-#p-card-four{grid-column: 3; grid-row: 1/2;}
-#p-card-five{grid-column: 3; grid-row: 2/3;}
-/* end of resume section */
+/* end of portfolio section */
 /*----------------------------------------------------------------------*/
 /* services section */
 #services-content{
@@ -173,7 +179,7 @@ p.large-text{font-size: 160%;}
   grid-gap: 1em;
   grid-auto-rows: minmax(40vh, auto);
 }
-.services-cards{
+.services-cards-content{
   text-align: center;
 }
 ion-icon{
@@ -254,13 +260,13 @@ form #theForm{
 /* footer section */
 #footer-section{
   width: 100%;
-  height: 10vh;
-  line-height: 10vh;
+  height: auto;
+  line-height: auto;
   background-color: #191919;
   color: #fff;
   text-align: center;
 }
-/* end of contact section */
+/* end of footer section */
 /*----------------------------------------------------------------------*/
 /* scroll highlight section */
 #about-section:hover #menu-link-two{
@@ -296,7 +302,6 @@ form #theForm{
   display: inline-block;
 }
 #about-content, #resume-content {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
   grid-auto-rows: minmax(40vh, auto);
@@ -307,7 +312,7 @@ form #theForm{
 }
 #model-details, #portfolio-content, #services-content, .services-cards,
 .services-cards-content h4, #contact-content-one, #contact-form-address,
-#theForm
+#theForm, #about-content, #resume-content
 {display: grid;}
 .resume-cards, .services-cards{
   background-color: #191919;
