@@ -322,3 +322,10 @@ form #theForm{
 }
 /*end of css organized strategically*/
 /*----------------------------------------------------------------------*/
+/* media query for rotated max height */
+@media (max-height: 450px){
+  #model-title h4{
+    display: none;
+    margin-top: .4em; margin-bottom: .4em;
+  }
+}
